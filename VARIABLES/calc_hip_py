@@ -1,0 +1,12 @@
+def calcular_hipotenusa(cateto_a, cateto_b):
+    hipotenusa = (cateto_a**2 + cateto_b**2)**0.5
+    return hipotenusa
+
+try:
+    cateto_a = float(input("Ingresa la longitud del primer cateto: "))
+    cateto_b = float(input("Ingresa la longitud del segundo cateto: "))
+
+    hipotenusa_calculada = calcular_hipotenusa(cateto_a, cateto_b)
+    print("La longitud de la hipotenusa es:", hipotenusa_calculada)
+except ValueError:
+    print("Error: Por favor, ingresa valores numéricos válidos.")

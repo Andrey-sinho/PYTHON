@@ -1,0 +1,15 @@
+def transformar_segundos_a_horas_y_minutos(tiempo_segundos):
+    horas = tiempo_segundos // 3600
+    minutos = (tiempo_segundos % 3600) // 60
+    return horas, minutos
+
+try:
+    tiempo_segundos = int(input("Ingresa el tiempo en segundos: "))
+
+    if tiempo_segundos < 0:
+        print("Error: Por favor, ingresa un valor de tiempo no negativo.")
+    else:
+        horas, minutos = transformar_segundos_a_horas_y_minutos(tiempo_segundos)
+        print("El tiempo es:", horas, "horas y", minutos, "minutos.")
+except ValueError:
+    print("Error: Por favor, ingresa un número entero válido.")
